@@ -1,0 +1,85 @@
+{"level":"info","time":"2024-11-13T19:32:06.800+0800","caller":"repair-platform/main.go:68","msg":"服务器正在启动，监听端口: 8080"}
+{"level":"info","ts":"2024-11-13T19:37:38.488+0800","caller":"repair-platform/main.go:66","msg":"服务器正在启动，监听端口: 8080"}
+{"level":"info","ts":"2024-11-15T13:33:37.163+0800","caller":"repair-platform/main.go:66","msg":"服务器正在启动，监听端口: 8080"}
+{"level":"info","ts":"2024-11-15T17:12:11.846+0800","caller":"repair-platform/main.go:66","msg":"服务器正在启动，监听端口: 8080"}
+{"level":"info","ts":"2024-11-15T23:14:16.133+0800","caller":"repair-platform/main.go:66","msg":"服务器正在启动，监听端口: 8080"}
+{"level":"info","ts":"2024-11-16T10:45:05.132+0800","caller":"repair-platform/main.go:66","msg":"服务器正在启动，监听端口: 8080"}
+{"level":"info","ts":"2024-11-16T10:59:04.874+0800","caller":"repair-platform/main.go:66","msg":"服务器正在启动，监听端口: 8080"}
+{"level":"info","ts":"2024-11-17T22:13:20.712+0900","caller":"repair-platform/main.go:66","msg":"服务器正在启动，监听端口: 8080"}
+{"level":"info","ts":"2024-11-17T22:19:40.654+0900","caller":"repair-platform/main.go:66","msg":"服务器正在启动，监听端口: 8080"}
+{"level":"info","ts":"2024-11-17T22:22:57.502+0900","caller":"repair-platform/main.go:66","msg":"服务器正在启动，监听端口: 8080"}
+{"level":"info","ts":"2024-11-18T14:12:45.703+0800","caller":"repair-platform/main.go:66","msg":"服务器正在启动，监听端口: 8080"}
+{"level":"info","ts":"2024-11-18T16:55:46.602+0800","caller":"repair-platform/main.go:66","msg":"服务器正在启动，监听端口: 8080"}
+{"level":"info","ts":"2024-11-18T17:50:32.487+0800","caller":"repair-platform/main.go:66","msg":"服务器正在启动，监听端口: 8080"}
+{"level":"info","ts":"2024-11-18T17:56:12.751+0800","caller":"repair-platform/main.go:66","msg":"服务器正在启动，监听端口: 8080"}
+{"level":"info","ts":"2024-11-18T19:03:53.134+0800","caller":"repair-platform/main.go:66","msg":"服务器正在启动，监听端口: 8080"}
+{"level":"info","ts":"2024-11-18T19:05:51.752+0800","caller":"repair-platform/main.go:66","msg":"服务器正在启动，监听端口: 8080"}
+{"level":"info","ts":"2024-11-18T19:08:02.604+0800","caller":"repair-platform/main.go:66","msg":"服务器正在启动，监听端口: 8080"}
+{"level":"info","ts":"2024-11-18T19:10:04.643+0800","caller":"repair-platform/main.go:66","msg":"服务器正在启动，监听端口: 8080"}
+{"level":"info","ts":"2024-11-18T19:21:33.000+0800","caller":"repair-platform/main.go:66","msg":"服务器正在启动，监听端口: 8080"}
+{"level":"info","ts":"2024-11-18T19:24:22.124+0800","caller":"repair-platform/main.go:66","msg":"服务器正在启动，监听端口: 8080"}
+{"level":"info","ts":"2024-11-18T19:26:55.891+0800","caller":"repair-platform/main.go:66","msg":"服务器正在启动，监听端口: 8080"}
+{"level":"info","ts":"2024-11-18T19:27:49.677+0800","caller":"repair-platform/main.go:66","msg":"服务器正在启动，监听端口: 8080"}
+{"level":"info","ts":"2024-11-18T19:30:15.307+0800","caller":"repair-platform/main.go:66","msg":"服务器正在启动，监听端口: 8080"}
+{"level":"info","ts":"2024-11-18T19:33:54.384+0800","caller":"repair-platform/main.go:66","msg":"服务器正在启动，监听端口: 8080"}
+{"level":"info","ts":"2024-11-18T19:36:55.140+0800","caller":"repair-platform/main.go:66","msg":"服务器正在启动，监听端口: 8080"}
+{"level":"info","ts":"2024-11-18T19:40:03.175+0800","caller":"repair-platform/main.go:66","msg":"服务器正在启动，监听端口: 8080"}
+{"level":"info","ts":"2024-11-18T19:52:42.497+0800","caller":"repair-platform/main.go:66","msg":"服务器正在启动，监听端口: 8080"}
+{"level":"info","ts":"2024-11-18T20:04:03.039+0800","caller":"repair-platform/main.go:66","msg":"服务器正在启动，监听端口: 8080"}
+{"level":"info","ts":"2024-11-18T20:30:59.071+0800","caller":"repair-platform/main.go:66","msg":"服务器正在启动，监听端口: 8080"}
+{"level":"info","ts":"2024-11-18T20:33:52.351+0800","caller":"repair-platform/main.go:66","msg":"服务器正在启动，监听端口: 8080"}
+{"level":"info","ts":"2024-11-19T19:05:06.778+0800","caller":"repair-platform/main.go:66","msg":"服务器正在启动，监听端口: 8080"}
+{"level":"info","ts":"2024-11-19T19:10:29.559+0800","caller":"repair-platform/main.go:66","msg":"服务器正在启动，监听端口: 8080"}
+{"level":"info","ts":"2024-11-19T19:29:15.917+0800","caller":"repair-platform/main.go:66","msg":"服务器正在启动，监听端口: 8080"}
+{"level":"info","ts":"2024-11-19T19:49:14.259+0800","caller":"repair-platform/main.go:66","msg":"服务器正在启动，监听端口: 8080"}
+{"level":"info","ts":"2024-11-19T19:55:36.507+0800","caller":"repair-platform/main.go:66","msg":"服务器正在启动，监听端口: 8080"}
+{"level":"info","ts":"2024-11-19T21:48:35.646+0800","caller":"repair-platform/main.go:66","msg":"服务器正在启动，监听端口: 8080"}
+{"level":"info","time":"2024-11-20T08:39:38.554+0800","caller":"repair-platform/main.go:26","message":"服务初始化开始"}
+{"level":"info","time":"2024-11-20T08:39:38.574+0800","caller":"repair-platform/main.go:29","message":"初始化 Gin 引擎"}
+{"level":"info","time":"2024-11-20T08:39:38.575+0800","caller":"repair-platform/main.go:89","message":"配置 CORS 中间件"}
+{"level":"info","time":"2024-11-20T08:39:38.575+0800","caller":"repair-platform/main.go:36","message":"初始化数据库连接"}
+{"level":"info","time":"2024-11-20T08:39:38.582+0800","caller":"repair-platform/main.go:47","message":"初始化 Email 服务"}
+{"level":"info","time":"2024-11-20T08:39:38.583+0800","caller":"repair-platform/main.go:51","message":"配置路由和中间件"}
+{"level":"info","time":"2024-11-20T08:39:38.587+0800","caller":"repair-platform/main.go:106","message":"服务器即将启动，监听端口: 8080"}
+{"level":"info","time":"2024-11-20T11:01:18.058+0800","caller":"repair-platform/main.go:26","message":"服务初始化开始"}
+{"level":"info","time":"2024-11-20T11:01:18.071+0800","caller":"repair-platform/main.go:29","message":"初始化 Gin 引擎"}
+{"level":"info","time":"2024-11-20T11:01:18.072+0800","caller":"repair-platform/main.go:89","message":"配置 CORS 中间件"}
+{"level":"info","time":"2024-11-20T11:01:18.072+0800","caller":"repair-platform/main.go:36","message":"初始化数据库连接"}
+{"level":"info","time":"2024-11-20T11:01:18.076+0800","caller":"repair-platform/main.go:47","message":"初始化 Email 服务"}
+{"level":"info","time":"2024-11-20T11:01:18.076+0800","caller":"repair-platform/main.go:51","message":"配置路由和中间件"}
+{"level":"info","time":"2024-11-20T11:01:18.077+0800","caller":"repair-platform/main.go:106","message":"服务器即将启动，监听端口: 8080"}
+{"level":"info","time":"2024-11-20T11:17:03.922+0800","caller":"repair-platform/main.go:26","message":"服务初始化开始"}
+{"level":"info","time":"2024-11-20T11:17:03.939+0800","caller":"repair-platform/main.go:29","message":"初始化 Gin 引擎"}
+{"level":"info","time":"2024-11-20T11:17:03.940+0800","caller":"repair-platform/main.go:89","message":"配置 CORS 中间件"}
+{"level":"info","time":"2024-11-20T11:17:03.940+0800","caller":"repair-platform/main.go:36","message":"初始化数据库连接"}
+{"level":"info","time":"2024-11-20T11:17:03.944+0800","caller":"repair-platform/main.go:47","message":"初始化 Email 服务"}
+{"level":"info","time":"2024-11-20T11:17:03.944+0800","caller":"repair-platform/main.go:51","message":"配置路由和中间件"}
+{"level":"info","time":"2024-11-20T11:17:03.945+0800","caller":"repair-platform/main.go:106","message":"服务器即将启动，监听端口: 8080"}
+{"level":"info","time":"2024-11-20T12:06:09.790+0800","caller":"repair-platform/main.go:26","message":"服务初始化开始"}
+{"level":"info","time":"2024-11-20T12:06:09.804+0800","caller":"repair-platform/main.go:29","message":"初始化 Gin 引擎"}
+{"level":"info","time":"2024-11-20T12:06:09.804+0800","caller":"repair-platform/main.go:89","message":"配置 CORS 中间件"}
+{"level":"info","time":"2024-11-20T12:06:09.804+0800","caller":"repair-platform/main.go:36","message":"初始化数据库连接"}
+{"level":"info","time":"2024-11-20T12:06:09.808+0800","caller":"repair-platform/main.go:47","message":"初始化 Email 服务"}
+{"level":"info","time":"2024-11-20T12:06:09.808+0800","caller":"repair-platform/main.go:51","message":"配置路由和中间件"}
+{"level":"info","time":"2024-11-20T12:06:09.808+0800","caller":"repair-platform/main.go:106","message":"服务器即将启动，监听端口: 8080"}
+{"level":"info","time":"2024-11-20T12:59:25.920+0800","caller":"repair-platform/main.go:26","message":"服务初始化开始"}
+{"level":"info","time":"2024-11-20T12:59:25.935+0800","caller":"repair-platform/main.go:29","message":"初始化 Gin 引擎"}
+{"level":"info","time":"2024-11-20T12:59:25.935+0800","caller":"repair-platform/main.go:89","message":"配置 CORS 中间件"}
+{"level":"info","time":"2024-11-20T12:59:25.935+0800","caller":"repair-platform/main.go:36","message":"初始化数据库连接"}
+{"level":"info","time":"2024-11-20T12:59:25.938+0800","caller":"repair-platform/main.go:47","message":"初始化 Email 服务"}
+{"level":"info","time":"2024-11-20T12:59:25.938+0800","caller":"repair-platform/main.go:51","message":"配置路由和中间件"}
+{"level":"info","time":"2024-11-20T12:59:25.939+0800","caller":"repair-platform/main.go:106","message":"服务器即将启动，监听端口: 8080"}
+{"level":"info","time":"2024-11-20T13:42:25.363+0800","caller":"repair-platform/main.go:26","message":"服务初始化开始"}
+{"level":"info","time":"2024-11-20T13:42:25.377+0800","caller":"repair-platform/main.go:29","message":"初始化 Gin 引擎"}
+{"level":"info","time":"2024-11-20T13:42:25.377+0800","caller":"repair-platform/main.go:89","message":"配置 CORS 中间件"}
+{"level":"info","time":"2024-11-20T13:42:25.377+0800","caller":"repair-platform/main.go:36","message":"初始化数据库连接"}
+{"level":"info","time":"2024-11-20T13:42:25.381+0800","caller":"repair-platform/main.go:47","message":"初始化 Email 服务"}
+{"level":"info","time":"2024-11-20T13:42:25.381+0800","caller":"repair-platform/main.go:51","message":"配置路由和中间件"}
+{"level":"info","time":"2024-11-20T13:42:25.382+0800","caller":"repair-platform/main.go:106","message":"服务器即将启动，监听端口: 8080"}
+{"level":"info","time":"2024-11-20T14:04:02.686+0800","caller":"repair-platform/main.go:26","message":"服务初始化开始"}
+{"level":"info","time":"2024-11-20T14:04:02.702+0800","caller":"repair-platform/main.go:29","message":"初始化 Gin 引擎"}
+{"level":"info","time":"2024-11-20T14:04:02.703+0800","caller":"repair-platform/main.go:89","message":"配置 CORS 中间件"}
+{"level":"info","time":"2024-11-20T14:04:02.703+0800","caller":"repair-platform/main.go:36","message":"初始化数据库连接"}
+{"level":"info","time":"2024-11-20T14:04:02.707+0800","caller":"repair-platform/main.go:47","message":"初始化 Email 服务"}
+{"level":"info","time":"2024-11-20T14:04:02.707+0800","caller":"repair-platform/main.go:51","message":"配置路由和中间件"}
+{"level":"info","time":"2024-11-20T14:04:02.708+0800","caller":"repair-platform/main.go:106","message":"服务器即将启动，监听端口: 8080"}

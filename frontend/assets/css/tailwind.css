@@ -1,0 +1,99 @@
+/* assets/css/tailwind.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 引入字体 */
+@font-face {
+    font-family: 'Hack Nerd Mono';
+    src: url('@/assets/fonts/HackNerdFontMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HY 12bit';
+    src: url('@/assets/fonts/hy12bit Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 使用 Tailwind 的 `@layer base` 设置全局样式 */
+@layer base {
+    /* 设置全局字体样式 */
+    body, * {
+        font-family: 'Hack Nerd Mono', 'HY 12bit', monospace !important;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Markdown 编辑器默认模式样式 */
+    .v-md-editor {
+        background-color: #f8f9fa !important;
+        color: #000000 !important;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .v-md-editor .v-md-editor-toolbar {
+        background-color: #f5f5f5 !important;
+        color: #000000 !important;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .v-md-editor .v-md-editor-preview {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* 设置 textarea 背景和字体颜色 */
+    .v-md-textarea-editor textarea {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+        transition: background-color 0.3s ease, color 0.3s ease!important;
+    }
+
+    /* Markdown 编辑器样式 */
+    .editor {
+        height: 100vh !important; /* 确保编辑器充满整个视口高度 */
+        overflow: auto !important;
+        background-color: #f8f9fa !important;
+        color: #000000 !important;
+        transition: background-color 0.3s ease, color 0.3s ease!important;
+    }
+
+    /* Label 颜色跟随模式变化 */
+    label {
+        color: #000!important; /* 默认白天模式字体颜色 */
+        transition: color 0.3s ease!important; /* 平滑过渡效果 */
+    }
+
+    /* 暗模式下 */
+    .dark label {
+        color: #fff!important; /* 暗模式字体颜色 */
+    }
+
+    /* 暗模式下的样式 */
+    .dark .v-md-editor {
+        background-color: #1a1a1a !important;
+        color: #ffffff !important;
+    }
+
+    .dark .v-md-editor .v-md-editor-toolbar {
+        background-color: #111111 !important;
+        color: #ffffff !important;
+    }
+
+    .dark .v-md-editor .v-md-editor-preview {
+        background-color: #2a2a2a !important;
+        color: #ffffff !important;
+    }
+
+    .dark .v-md-textarea-editor textarea {
+        background-color: #2a2a2a !important;
+        color: #ffffff !important;
+    }
+
+}

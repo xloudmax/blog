@@ -1,0 +1,461 @@
+basePath: /api
+definitions:
+  controllers.ResetPasswordInput:
+    properties:
+      email:
+        type: string
+      new_password:
+        type: string
+      token:
+        type: string
+    required:
+    - email
+    - new_password
+    - token
+    type: object
+  controllers.SendVerificationCodeInput:
+    properties:
+      email:
+        type: string
+    required:
+    - email
+    type: object
+  controllers.VerifyEmailInput:
+    properties:
+      code:
+        type: string
+      email:
+        type: string
+    required:
+    - code
+    - email
+    type: object
+  models.Feedback:
+    properties:
+      comments:
+        description: 反馈评论
+        type: string
+      createdAt:
+        type: string
+      deletedAt:
+        type: string
+      id:
+        type: integer
+      rating:
+        description: 评分
+        type: integer
+      repairID:
+        description: 关联的维修请求ID
+        type: integer
+      updatedAt:
+        type: string
+      userID:
+        description: 用户ID
+        type: integer
+    type: object
+  models.LoginInput:
+    properties:
+      password:
+        type: string
+      username:
+        type: string
+    required:
+    - password
+    - username
+    type: object
+  models.RepairRequest:
+    type: object
+  models.User:
+    properties:
+      createdAt:
+        type: string
+      email:
+        type: string
+      id:
+        type: integer
+      isVerified:
+        type: boolean
+      password:
+        type: string
+      role:
+        description: '角色: user, technician, admin'
+        type: string
+      updatedAt:
+        type: string
+      username:
+        type: string
+    type: object
+host: localhost:8080
+info:
+  contact:
+    email: support@swagger.io
+    name: API 支持
+    url: http://www.swagger.io/support
+  description: 这是一个维修平台的示例服务器。
+  termsOfService: http://swagger.io/terms/
+  title: 维修平台 API
+  version: "1.0"
+paths:
+  /feedback:
+    post:
+      consumes:
+      - application/json
+      description: 允许用户为特定的维修请求提交反馈
+      parameters:
+      - description: 反馈内容
+        in: body
+        name: feedback
+        required: true
+        schema:
+          $ref: '#/definitions/models.Feedback'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 反馈提交成功
+          schema:
+            additionalProperties: true
+            type: object
+        "400":
+          description: 输入数据无效
+          schema:
+            additionalProperties: true
+            type: object
+        "404":
+          description: 未找到维修请求
+          schema:
+            additionalProperties: true
+            type: object
+        "500":
+          description: 提交反馈失败
+          schema:
+            additionalProperties: true
+            type: object
+      summary: 提交维修反馈
+      tags:
+      - 反馈
+  /feedback/{id}:
+    get:
+      description: 允许管理员或用户查看特定维修请求的反馈
+      parameters:
+      - description: 维修请求ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 反馈记录
+          schema:
+            items:
+              $ref: '#/definitions/models.Feedback'
+            type: array
+        "404":
+          description: 未找到此维修请求的反馈
+          schema:
+            additionalProperties: true
+            type: object
+        "500":
+          description: 检索反馈失败
+          schema:
+            additionalProperties: true
+            type: object
+      summary: 查看维修反馈
+      tags:
+      - 反馈
+  /login:
+    post:
+      consumes:
+      - application/json
+      description: 用户通过用户名和密码登录系统
+      parameters:
+      - description: 用户名和密码
+        in: body
+        name: login
+        required: true
+        schema:
+          $ref: '#/definitions/models.LoginInput'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 登录成功，返回 JWT 令牌
+          schema:
+            additionalProperties: true
+            type: object
+        "400":
+          description: 错误请求
+          schema:
+            additionalProperties: true
+            type: object
+        "401":
+          description: 用户名或密码无效或邮箱未验证
+          schema:
+            additionalProperties: true
+            type: object
+        "500":
+          description: 查询用户失败
+          schema:
+            additionalProperties: true
+            type: object
+      summary: 用户登录
+      tags:
+      - 用户认证
+  /register:
+    post:
+      consumes:
+      - application/json
+      description: 注册新用户并发送验证邮件
+      parameters:
+      - description: 用户注册信息
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/models.User'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 注册成功，验证码已发送至您的邮箱
+          schema:
+            additionalProperties: true
+            type: object
+        "400":
+          description: 错误请求
+          schema:
+            additionalProperties: true
+            type: object
+        "409":
+          description: 用户名或邮箱已被注册
+          schema:
+            additionalProperties: true
+            type: object
+        "500":
+          description: 创建用户失败
+          schema:
+            additionalProperties: true
+            type: object
+      summary: 用户注册
+      tags:
+      - 用户认证
+  /repair_requests:
+    get:
+      description: 管理员查看所有维修请求的列表
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 维修请求列表
+          schema:
+            items:
+              $ref: '#/definitions/models.RepairRequest'
+            type: array
+        "500":
+          description: 检索维修请求失败
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      summary: 查看维修请求列表
+      tags:
+      - 维修请求
+    post:
+      consumes:
+      - application/json
+      description: 用户提交新的维修请求
+      parameters:
+      - description: 维修请求内容
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/models.RepairRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 维修请求提交成功
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "400":
+          description: 输入数据无效
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "500":
+          description: 提交维修请求失败
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      summary: 提交维修请求
+      tags:
+      - 维修请求
+  /repair_requests/{id}:
+    put:
+      consumes:
+      - application/json
+      description: 管理员根据请求ID更新维修请求信息
+      parameters:
+      - description: 维修请求ID
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: 更新的维修请求内容
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/models.RepairRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 维修请求更新成功
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "400":
+          description: 输入数据无效
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "404":
+          description: 未找到维修请求
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "500":
+          description: 更新维修请求失败
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      summary: 更新维修请求
+      tags:
+      - 维修请求
+  /reset_password:
+    post:
+      consumes:
+      - application/json
+      description: 用户提交邮箱和验证码，通过验证后，可以设置新密码
+      parameters:
+      - description: 邮箱、验证码和新密码
+        in: body
+        name: reset
+        required: true
+        schema:
+          $ref: '#/definitions/controllers.ResetPasswordInput'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 密码已成功重置
+          schema:
+            additionalProperties: true
+            type: object
+        "400":
+          description: 错误请求
+          schema:
+            additionalProperties: true
+            type: object
+        "401":
+          description: 无效或过期的验证码
+          schema:
+            additionalProperties: true
+            type: object
+        "500":
+          description: 用户未找到或无法更新密码
+          schema:
+            additionalProperties: true
+            type: object
+      summary: 重置密码
+      tags:
+      - 用户认证
+  /send_verification_code:
+    post:
+      consumes:
+      - application/json
+      description: 当用户需要重新发送验证邮件时，调用该接口生成并发送新的验证码
+      parameters:
+      - description: 用户邮箱
+        in: body
+        name: email
+        required: true
+        schema:
+          $ref: '#/definitions/controllers.SendVerificationCodeInput'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 验证码已发送至您的邮箱
+          schema:
+            additionalProperties: true
+            type: object
+        "400":
+          description: 错误请求
+          schema:
+            additionalProperties: true
+            type: object
+        "404":
+          description: 用户未找到
+          schema:
+            additionalProperties: true
+            type: object
+        "500":
+          description: 发送验证码失败
+          schema:
+            additionalProperties: true
+            type: object
+      summary: 发送邮箱验证码
+      tags:
+      - 用户认证
+  /verify_email:
+    post:
+      consumes:
+      - application/json
+      description: 验证用户提供的邮箱验证码
+      parameters:
+      - description: 邮箱和验证码
+        in: body
+        name: verification
+        required: true
+        schema:
+          $ref: '#/definitions/controllers.VerifyEmailInput'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 邮箱验证成功
+          schema:
+            additionalProperties: true
+            type: object
+        "400":
+          description: 错误请求
+          schema:
+            additionalProperties: true
+            type: object
+        "401":
+          description: 无效或过期的验证码
+          schema:
+            additionalProperties: true
+            type: object
+        "500":
+          description: 用户未找到
+          schema:
+            additionalProperties: true
+            type: object
+      summary: 验证用户邮箱
+      tags:
+      - 用户认证
+swagger: "2.0"

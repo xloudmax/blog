@@ -1,0 +1,1 @@
+export { default } from "file:///E:/Golang/JNUTechniciansBase/frontend/JNUtechniciansbase/node_modules/@nuxt/vite-builder/dist/runtime/vite-node.mjs"
